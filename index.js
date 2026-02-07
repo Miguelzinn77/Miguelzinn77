@@ -1,4 +1,3 @@
-alert('falaaaaa');
   
   let titulo = document.getElementById('titulo');
     alert('Seja Muito Bem Vindo ao My Drugs');
@@ -9,25 +8,31 @@ alert('falaaaaa');
         alert('Você é menor de idade, algumas funcionalidades podem estar restritas.');
     }
 
-    async function login() {
-    const usuario = document.getElementById("usuario").value
-    const senha = document.getElementById("senha").value
+  async function login() {
+  const usuario = document.getElementById("usuario").value;
+  const senha = document.getElementById("senha").value;
 
+  try {
     const resposta = await fetch("http://localhost:3001/entrar", {
-    method: "POST",
-    headers: {
-    "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-    usuarios: usuario,
-    password: senha
-    })
-    })
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        usuario: usuario,
+        password: senha
+      })
+    });
 
-    const dados = await resposta.json()
+    const dados = await resposta.json();
+    alert(dados.message);
 
-    alert(dados.message)
+  } catch (erro) {
+    alert("Erro ao conectar com o servidor");
+    console.error(erro);
+  }
 }
+
 
 const botao = document.querySelector('.botao-menu');
 
