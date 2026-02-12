@@ -4,7 +4,7 @@
     --font-family: 'Arial', sans-serif;
     --text-color:var(--font-family);
     --text-secondary-color: #ffff02;
-    --background-color: #e4c5c5;
+    --background-color: rgba(150, 150, 250, 0.8);
 }
 
 .container-login {

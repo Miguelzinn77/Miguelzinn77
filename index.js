@@ -1,5 +1,4 @@
-  
-  let titulo = document.getElementById('titulo');
+    let titulo = document.getElementById('titulo');
     alert('Seja Muito Bem Vindo ao My Drugs');
     let idade = Number(prompt('Digite sua idade:'));
     if (idade >= 18) {
@@ -37,6 +36,37 @@
     console.error(erro);
   }
 }
+
+//--------------- CRIAR USUÁRIO ---------------
+   async function criarUsuario() {
+  const novoUsuario = document.getElementById("novo-usuario").value;
+  const novaSenha = document.getElementById("nova-senha").value;
+
+  try {
+    const resposta = await fetch("http://localhost:3001/usuarios", {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        nome: novoUsuario,
+        idade: Number(novaSenha)
+      })
+    });
+
+    if (!resposta.ok) {
+      throw new Error("Erro na requisição");
+    }
+
+    const dados = await resposta.json();
+    alert(dados.message);
+
+  } catch (erro) {
+    alert("Erro ao conectar com o servidor");
+    console.error(erro);
+  }
+}
+
 
 // ---------------- MENU LATERAL ----------------
 const botao = document.querySelector('.botao-menu');

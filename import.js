@@ -10,6 +10,7 @@ app.use(express.json());
 
 // Array de usuários em memória (em produção, use banco de dados)
 let usuarios = [
+  { id: 0, nome: "Admin", idade: 99, password: 99 },
   { id: 1, nome: "João", idade: 25, password: 25 },
   { id: 2, nome: "Maria", idade: 30, password: 30 },
   { id: 3, nome: "Pedro", idade: 22, password: 22 },
@@ -34,6 +35,15 @@ app.post("/entrar", (req, res) => {
     res.status(401).json({ message: "Usuário ou senha incorretos." });
   }
 });
+
+// Rota PUT para criar um novo usuário
+app.put("/usuarios", (req, res) => {
+  const { nome, idade } = req.body;
+  const novoUsuario = { id: usuarios.length, nome, idade, password: idade };
+  usuarios.push(novoUsuario);
+  res.json({ message: "Usuário criado com sucesso!", usuario: novoUsuario });
+});
+
 
 // Inicia o servidor
 app.listen(port, () => {
