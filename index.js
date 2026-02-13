@@ -26,6 +26,8 @@
 
       if (!resposta.ok) {
       throw new Error("Erro na requisição");
+    } else {
+      alert("Login bem-sucedido!");
     }
 
     const dados = await resposta.json();
