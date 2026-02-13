@@ -1,5 +1,5 @@
 
-## Olá eu sou o Miguel, DEV FULL STACK, cada aprimorando minhas habilidades como Dev!!
+## Olá eu sou o Miguel, DEV FULL STACK, cada dia aprimorando minhas habilidades como Dev!!
 🎓 Estudante de **Análise e Desenvolvimento de Sistemas (ADS)**  
 💻 Desenvolvedor **Full Stack em formação**, com foco em aplicações web  
 
