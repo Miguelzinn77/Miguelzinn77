@@ -1,10 +1,10 @@
 
-## Olá eu sou o Miguel, estou buscando desenvolver minhas habilidades como Dev!!
+## Olá eu sou o Miguel, DEV FULL STACK, cada aprimorando minhas habilidades como Dev!!
 🎓 Estudante de **Análise e Desenvolvimento de Sistemas (ADS)**  
 💻 Desenvolvedor **Full Stack em formação**, com foco em aplicações web  
 
-- 🌐 HTML, CSS, JavaScript
-- 💡 Noções de APIs com Node.js e lógica de servidor
+- 🌐 HTML, CSS, JavaScript, React
+- 💡 Noções de APIs com Node.js + Express.js e lógica de servidor
 - 🗄️ Git e GitHub  
 
 <div style="display: inline_block"><br>
